@@ -1,0 +1,308 @@
+body {
+    font-family: sans-serif;
+    background: #333745;
+}
+
+.price__container {
+    margin: auto;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.price__card:hover {
+    animation-name: resize--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__card:not(:hover) {
+    animation-name: resize--not--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__container>.price__card {
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.price__card--blue {
+    background: linear-gradient(to left, #8ce2de, #8080d6);
+    height: 335px;
+    width: 250px;
+}
+
+.price__card--red {
+    background: linear-gradient(to left, #ff4167, #ff4b2d);
+    height: 365px;
+    width: 279px;
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+    top: 10px;
+}
+
+.price__card--green {
+    background: linear-gradient(to left, #04b199, #8ec13c);
+    height: 335px;
+    width: 250px;
+}
+
+.price__card>.price__card-container {
+    margin-top: 50px;
+}
+
+.price__card-container>.price__card--label {
+    color: #fff;
+    display: block;
+    font-weight: bold;
+}
+
+.price__card--label--symbol {
+    font-weight: bold;
+    color: #fff;
+}
+
+.price__card--label--number {
+    font-weight: bold;
+    color: #fff;
+}
+
+.price__card--label--sm {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.price__card--label--md {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.price__card--label--lg {
+    font-size: 70px;
+}
+
+.price__card--label--xl {
+    font-size: 80px;
+}
+
+.subscribe__button {
+    border-radius: 20px 0px 20px;
+    border: none;
+    width: 45%;
+    height: 10%;
+    font-weight: bold;
+    background: #fff;
+    position: relative;
+    left: 28%;
+    animation: none;
+}
+
+.price__card--green>.subscribe__button,
+.price__card--blue>.subscribe__button {
+    position: relative;
+    top: 36px;
+}
+
+.price__card--red>.subscribe__button {
+    position: relative;
+    top: 50px;
+}
+
+.subscribe__button:hover {
+    cursor: pointer;
+    animation-name: button--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.subscribe__button:not(:hover) {
+    animation-name: button--not--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+.price__background {
+    position: absolute;
+    z-index: -9999;
+    font-size: 100px;
+    left: 0px;
+    top: 21px;
+    color: white;
+    opacity: 0.05;
+    font-weight: bold;
+}
+
+.price__line--left {
+    background: white;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    top: 10px;
+    left: 70px;
+}
+
+.price__line--rigth {
+    background: white;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    top: -24px;
+    left: 154px;
+}
+
+.price__line--left--awesome  {
+    background: white;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    top: 10px;
+    left: 80px;
+}
+
+.price__line--rigth--awesome {
+    background: white;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    top: -24px;
+    left: 170px;
+}
+
+.price__line--left:hover, .price__line--left--awesome:hover {
+    animation-name: sacudir--line--left--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__line--left:not(:hover), .price__line--left--awesome:not(:hover) {
+    animation-name: sacudir--line--left--not--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__line--rigth:hover, .price__line--rigth--awesome:hover {
+    animation-name: sacudir--line--rigth--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__line--rigth:not(:hover), .price__line--rigth--awesome:not(:hover) {
+    animation-name: sacudir--line--rigth--not--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+.price__background:hover {
+    animation-name: sacudir;
+    animation-duration:  0.4s;
+}
+
+@keyframes button--not--hover {
+    0% {
+        border-radius: 0px 0px 20px 20px;
+        width: 100%;
+        left: 0%;
+    }
+
+    100% {
+        border-radius: 20px 0px 20px;
+        width: 45%;
+        left: 28%;
+    }
+}
+
+@keyframes button--hover {
+    0% {
+        border-radius: 20px 0px 20px;
+        width: 45%;
+        left: 28%;
+    }
+
+    100% {
+        border-radius: 0px 0px 20px 20px;
+        width: 100%;
+        left: 0%;
+    }
+}
+
+@keyframes resize--hover {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1.05, 1.05);
+    }
+}
+
+@keyframes resize--not--hover {
+    0% {
+        transform: scale(1.05, 1.05);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+@keyframes sacudir {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes sacudir--line--left--hover {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(8px);
+    }
+}
+
+@keyframes sacudir--line--left--not--hover {
+    0% {
+        transform: translateX(8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes sacudir--line--rigth--hover {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-8px);
+    }
+}
+
+@keyframes sacudir--line--rigth--not--hover {
+    0% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
