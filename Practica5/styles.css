@@ -1,0 +1,128 @@
+* {
+    font-family: 'Open Sans';
+}
+
+body {
+    background: hsl(257, 40%, 49%);
+}
+
+  
+.header__container > img {
+    position: relative;
+    left: 7%;
+    margin-top: 5%;
+}
+
+.main__container {
+    position: relative;
+}
+
+
+.main__content > p {
+    color:#fff;
+}
+
+.main_content--register {
+    background: #fff;
+    border:none;
+    color: hsl(257, 40%, 49%);
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    font-weight: 400;
+    margin-top: 5%;
+}
+
+.main__social--button {
+    border-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: hsl(257, 40%, 49%);
+    color:#fff;
+    margin-left: 2%;    
+}
+
+.main_content--register:hover {
+    cursor: pointer;
+    color: #fff;
+    background:hsl(300, 69%, 71%);
+}
+
+@media only screen and (max-width:425px){
+    body {
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;        
+    }  
+    .header__container > img {
+        width: 37%;
+    }
+    .main__container {
+        text-align: center;
+        margin-top: 18%;
+    }
+    .main__image > img {
+        width: 80%;
+    }    
+    .main__content {
+        margin-top: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .main__content--title {
+        font-weight: 600;
+        font-size: 1.7rem;
+    }
+    .main__content--label {
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+    .main__social--button {
+        margin-top: 18%;        
+    }
+}
+
+@media only screen and (min-width: 426px){
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;        
+    } 
+    .header__container > img {
+        position: relative;
+        left: 3%;
+        margin-top: 2%;
+        width: 20%;
+    }
+    .main__container {
+        text-align: left;
+        margin-top: 4%;
+        margin-left: 4%;
+    }
+    .main__image {
+        display: inline-block;
+        width: 42%;
+    }
+    .main__image > img {
+        width: 100%;
+    }    
+    .main__content {
+        display: inline-block;
+        width: 40%;
+        vertical-align: top;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+    .main__content--title {
+        font-weight: 600;
+        font-size: 1.7rem;
+    }
+    .main__content--label {
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+    .main__social {
+        margin-left: 76%;
+    }
+}
