@@ -9,18 +9,6 @@ body {
     margin-top: 200px;
 }
 
-.price__card:hover {
-    animation-name: resize--hover;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.price__card:not(:hover) {
-    animation-name: resize--not--hover;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
 .price__container>.price__card {
     display: inline-block;
     border-radius: 20px;
@@ -109,20 +97,6 @@ body {
     top: 50px;
 }
 
-.subscribe__button:hover {
-    cursor: pointer;
-    animation-name: button--hover;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.subscribe__button:not(:hover) {
-    animation-name: button--not--hover;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-
 .price__background {
     position: absolute;
     z-index: -9999;
@@ -158,7 +132,7 @@ body {
     width: 25px;
     position: relative;
     top: 10px;
-    left: 80px;
+    left: 84px;
 }
 
 .price__line--rigth--awesome {
@@ -170,8 +144,14 @@ body {
     left: 170px;
 }
 
-.price__line--left:hover, .price__line--left--awesome:hover {
-    animation-name: sacudir--line--left--hover;
+.price__card:not(:hover) {
+    animation-name: resize--not--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.subscribe__button:not(:hover) {
+    animation-name: button--not--hover;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -182,22 +162,52 @@ body {
     animation-fill-mode: forwards;
 }
 
-.price__line--rigth:hover, .price__line--rigth--awesome:hover {
-    animation-name: sacudir--line--rigth--hover;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
 .price__line--rigth:not(:hover), .price__line--rigth--awesome:not(:hover) {
     animation-name: sacudir--line--rigth--not--hover;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
+.price__card:hover {
+    animation-name: resize--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 
-.price__background:hover {
+.price__card:hover .subscribe__button{
+    cursor: pointer;
+    animation-name: button--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__card:hover .price__background{
     animation-name: sacudir;
     animation-duration:  0.4s;
+}
+
+.price__card:hover .price__line--left{
+    animation-name: sacudir--line--left--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__card:hover .price__line--left--awesome{
+    animation-name: sacudir--line--left--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__card:hover .price__line--rigth--awesome{
+    animation-name: sacudir--line--rigth--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.price__card:hover .price__line--rigth{
+    animation-name: sacudir--line--rigth--hover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes button--not--hover {
@@ -247,7 +257,6 @@ body {
         transform: scale(1, 1);
     }
 }
-
 
 @keyframes sacudir {
     0% {
